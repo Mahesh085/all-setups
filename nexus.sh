@@ -1,3 +1,4 @@
+#PORT NUMBER: 9000
 sudo yum update -y
 sudo cd /opt/
 sudo yum install java-17-amazon-corretto-jmods -y
