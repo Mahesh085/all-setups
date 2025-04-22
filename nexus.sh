@@ -26,5 +26,5 @@ sudo chown -R nexus:nexus /opt/sonatype-work
 #[Install]
 #WantedBy=multi-user.target
 #EOL
-sh /opt/nexus/bin/nexus start
+su - nexus -c "/opt/nexus/bin/nexus start"
 
