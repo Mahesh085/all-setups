@@ -4,7 +4,7 @@ set -e
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 Normal='\033[0m'
-trap 'echo -e "${RED}"Error at $LINENO"' ERR
+trap 'echo -e "${RED}"Error at Line: $LINENO ${Normal}"' ERR
 #STEP-1: INSTALLING GIT JAVA-1.8.0 MAVEN 
 yum install git java-1.8.0-openjdk maven -y
 
@@ -24,7 +24,7 @@ echo -e "${GREEN} Installed Jenkins Successfully${Normal}"
 update-alternatives --config java
 echo -e "${GREEN}Updating the Jenkins${Normal}"
 
-#STEP-4: RESTARTING JENKINS (when we download service it will on stopped state)
+#STEP-4: STARTING JENKINS (when we download service it will on stopped state)
 systemctl start jenkins.service
-echo -e "${GREEN}Started Jenkins Successfully${Normal}"
 systemctl status jenkins.service
+echo -e "${GREEN} Successfully Started the Jenkins${Noraml}"
